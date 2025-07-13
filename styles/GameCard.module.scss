@@ -1,0 +1,54 @@
+.favoriteBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+}
+.heart {
+  color: #e74c3c;
+  font-size: 1.7rem;
+  filter: drop-shadow(0 1px 2px #0008);
+}
+.heartOutline {
+  color: #fff;
+  font-size: 1.7rem;
+  filter: drop-shadow(0 1px 2px #0008);
+}
+.card {
+  position: relative;
+  background: #fff;
+  border: 3px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+  min-width: 0;
+}
+.thumbnail {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  background: #f5f5f5;
+}
+.info {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+.title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.vendor {
+  color: #888;
+  font-size: 0.95rem;
+} 
