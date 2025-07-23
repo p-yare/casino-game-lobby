@@ -1,0 +1,35 @@
+.categoryBox {
+  background: transparent;
+  border-radius: 12px;
+  display: flex;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.buttonRow {
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+.buttonRow::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.button {
+  background: none;
+  border: 1.5px solid #3a334a;
+  color: #eae6f5;
+  border-radius: 8px;
+  padding: 0.4rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.button:hover {
+  background: #332E42;
+} 

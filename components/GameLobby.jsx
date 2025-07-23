@@ -65,13 +65,32 @@ export default function GameLobby() {
   }
 
   return (
-    <div className={styles.grid}>
-      {validGames.map(game => <GameCard key={game.slug} game={game} />)}
-      {hasNextPage && (
-        <div ref={loaderRef}>
-          {isFetchingNextPage ? <Loader /> : null}
+    <>
+      <div className={styles.header}>
+        <div className={styles.headerLeft}>
+          <img src="/flame.png" alt="Flame" className={styles.flameIcon} />
+          <span className={styles.headerTitle}>Featured Games</span>
         </div>
-      )}
-    </div>
+        <div className={styles.headerRight}>
+          <button className={styles.viewAllBtn}>View All</button>
+          <button className={styles.arrowGroupBtn} aria-label="Scroll Left or Right">
+            <svg style={{opacity: 0.5}} className={styles.arrowIcon} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 15L6 9L12 3" stroke="#A59EB5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <svg className={styles.arrowIcon} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 3L12 9L6 15" stroke="#A59EB5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div className={styles.grid}>
+        {validGames.map(game => <GameCard key={game.slug} game={game} />)}
+        {hasNextPage && (
+          <div ref={loaderRef} className={styles.loaderEnd}>
+            {isFetchingNextPage ? <Loader /> : null}
+          </div>
+        )}
+      </div>
+    </>
   );
 } 

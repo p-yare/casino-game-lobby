@@ -1,11 +1,24 @@
-.input {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #332E42;
-  border-radius: 6px;
+.searchBarWrapper {
+  display: flex;
+  align-items: center;
+  background: #262232;
+  border: 2px solid #3A334A;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
   margin-bottom: 1.5rem;
-  box-sizing: border-box;
-  background: #282432;
-  color: #fff;
+}
+
+.searchIcon {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #EAE6F5;
+  font-size: 1rem;
+  width: 100%;
 } 

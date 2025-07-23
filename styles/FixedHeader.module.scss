@@ -1,0 +1,66 @@
+.fixedHeader {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #25222D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0rem;
+  z-index: 10;
+  margin-bottom: 1.2rem;
+}
+
+.headerLogoMobile {
+  display: none;
+}
+.headerLogoWeb {
+  display: block;
+  height: 26px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.62rem;
+}
+
+.loginBtn {
+  background: none;
+  border: 2px solid #332E42;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.registerBtn {
+  background: #7658ED;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .fixedHeader {
+    padding: 0.5rem 0rem;
+  }
+  .headerLogoMobile {
+    display: block;
+    height: 31px;
+  }
+  .headerLogoWeb {
+    display: none;
+  }
+  .loginBtn, .registerBtn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+  }
+  .headerActions {
+    gap: 0.4rem;
+  }
+} 
