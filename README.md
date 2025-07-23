@@ -1,16 +1,19 @@
 # Casino Game Lobby (Next.js)
 
-A modern, feature-rich casino game lobby built with Next.js, React Query, Zustand, and SCSS Modules. Features advanced search, filtering, infinite scroll, and favorites functionality.
+A modern, feature-rich casino game lobby built with Next.js, React Query, Zustand, and SCSS Modules. Now with a fully responsive, Figma-accurate UI, including a fixed header, airdrop banner, horizontal category bar, improved search bar, and transparent horizontal scrollbars.
 
 ## Features
 
 ### Core Functionality
-- **Game Grid Display** - Responsive grid layout with game cards
-- **Real-time Search** - Debounced search with instant results
-- **Provider Filtering** - Filter games by casino providers
-- **Favorites System** - Add/remove games to favorites with persistent storage
-- **Infinite Scroll** - Seamless pagination with intersection observer
-- **Show Favorites Only** - Toggle to view only favorited games
+- **Game Grid Display** – Responsive, horizontally scrollable grid of game cards
+- **Real-time Search** – Debounced search bar with search icon
+- **Provider Filtering** – Horizontal, scrollable provider filter with transparent scrollbar
+- **Favorites System** – Add/remove games to favorites with persistent storage
+- **Infinite Scroll** – Seamless pagination with intersection observer
+- **Show Favorites Only** – Toggle to view only favorited games
+- **Category Bar** – Horizontal, scrollable button bar for quick filtering
+- **Airdrop Banner** – Customizable banner section for promotions
+- **Fixed Header** – Responsive header with logo and login/register buttons
 
 ### User Experience
 - **Performance Optimized** - React Query caching and optimized re-renders
@@ -76,41 +79,48 @@ npm run test:watch   # Run tests in watch mode
 ## 📁 Project Structure
 
 ```
-casino-lobby/
-├── components/              # React components
-│   ├── __tests__/          # Test files
+casion-lobby/
+├── components/
+│   ├── __tests__/
 │   │   └── GameCard.test.jsx
-│   ├── GameCard.jsx        # Individual game card
-│   ├── GameLobby.jsx       # Main game grid
-│   ├── SearchBar.jsx       # Search functionality
-│   ├── ProviderFilter.jsx  # Provider filtering
-│   ├── ShowFavoritesToggle.jsx # Favorites toggle
-│   ├── Loader.jsx          # Loading component
-│   ├── EmptyState.jsx      # Empty state component
-│   └── ErrorState.jsx      # Error state component
-├── pages/                  # Next.js pages
-│   ├── _app.js            # App wrapper
-│   ├── _document.js       # Document structure
-│   └── index.js           # Home page
-├── store/                  # State management
-│   └── useGameStore.js    # Zustand store
-├── styles/                 # SCSS modules
-│   ├── globals.css        # Global styles
+│   ├── AirdropBanner.jsx         # Airdrop banner section
+│   ├── CategoryBar.jsx           # Horizontal dummy button bar
+│   ├── FixedHeader.jsx           # Responsive fixed header
+│   ├── GameCard.jsx
+│   ├── GameLobby.jsx
+│   ├── SearchBar.jsx
+│   ├── ProviderFilter.jsx
+│   ├── ShowFavoritesToggle.jsx
+│   ├── Loader.jsx
+│   ├── EmptyState.jsx
+│   └── ErrorState.jsx
+├── pages/
+│   └── index.js
+├── store/
+│   └── useGameStore.js
+├── styles/
+│   ├── AirdropBanner.module.scss
+│   ├── CategoryBar.module.scss
+│   ├── FixedHeader.module.scss
 │   ├── GameCard.module.scss
 │   ├── GameLobby.module.scss
 │   ├── ProviderFilter.module.scss
 │   ├── SearchBar.module.scss
 │   ├── Loader.module.scss
 │   └── ShowFavoritesToggle.module.scss
-├── utils/                  # Utility functions
-│   └── api.js             # API integration
-├── public/                 # Static assets
-│   └── providers/         # Provider logos
-├── jest.config.js         # Jest configuration
-├── jest.setup.js          # Jest setup
-├── babel.config.js        # Babel configuration
-├── next.config.js         # Next.js configuration
-└── package.json           # Dependencies and scripts
+├── utils/
+│   └── api.js
+├── public/
+│   ├── jackpot-logo-web.png      # Web logo
+│   ├── bag.png                   # Mobile logo
+│   ├── airdrop-banner.png        # Airdrop banner image
+│   ├── providers-icon.png        # Providers icon
+│   └── providers/               # Provider logos
+├── jest.config.js
+├── jest.setup.js
+├── babel.config.js
+├── package.json
+└── README.md
 ```
 
 ##  Key Features Explained
@@ -119,6 +129,7 @@ casino-lobby/
 - **Debounced Search**: 300ms delay to prevent excessive API calls
 - **Provider Filtering**: Multi-select provider filtering with visual feedback
 - **Favorites Toggle**: Show all games or favorites only
+- **Category Bar**: Horizontal buttons for quick filtering
 
 ### Infinite Scroll
 - **Intersection Observer**: Efficient scroll detection
@@ -139,7 +150,7 @@ casino-lobby/
 - **Mocking**: Zustand store and API calls properly mocked
 - **Accessibility**: Basic accessibility with ARIA labels for favorite buttons, alt text for images, and accessibility-focused tests
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 No environment variables required for basic functionality.
